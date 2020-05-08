@@ -48,7 +48,7 @@ public final class EchoServer {
             sslCtx = null;
         }
 
-        // Configure the server.
+        // Configure the server. 死循环 不停检测io
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         final EchoServerHandler serverHandler = new EchoServerHandler();

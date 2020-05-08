@@ -292,6 +292,12 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
         }
     }
 
+    /**
+     * 1.new 一个channel
+     * 2.init这个channel
+     * 3.将这个channel注册到某个对象上
+     * @return
+     */
     final ChannelFuture initAndRegister() {
         Channel channel = null;
         try {
